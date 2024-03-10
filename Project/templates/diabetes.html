@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Diabetes Prediction</title>
+    <link rel="icon" href="{{url_for('static', filename='/image/h.png')}}">
+</head>
+<body>
+    <div id="nav">
+        <a href="/">
+            <div id="logo">
+                <img src="{{url_for('static', filename='/image/h.png')}}" id="h" alt="">
+                <h1>Multi-Disease Prediction</h1>    
+            </div>
+        </a>  
+            <div id="men">
+                <a id="menu" href="/">Menu</a>
+                <a id="" href="">About</a>
+            </div>
+    </div>
+    
+    <div id="cat">
+        
+        <form action="{{ url_for('dia') }}" method="post">
+            <div id="head"><div><p>Diabetes Prediction</p></div></div>
+            <div id="fo">
+            <div id="lab">
+                <label for="pre">Pregnancies</label>
+                <label for="glu">Glucose</label>
+                <label for="bp">Blood Pressure</label>
+                <label for="st">Skin Thickness</label>
+                <label for="ins">Insulin</label>
+                <label for="bmi">BMI</label>
+                <label for="dp">DiabetesPedigree</label>
+                <label for="age">Age</label>
+            </div>
+            <div id="inp">
+                <input id="pre" name="pre" type="text">
+                <input id="glu" name="glu" type="text">
+                <input id="bp" name="bp" type="text">
+                <input id="st" name="st" type="text">
+                <input id="ins" name="ins" type="text">
+                <input id="bmi" name="bmi" type="text">
+                <input id="dp" name="dp" type="text">
+                <input id="age" name="age" type="text">
+            </div>
+            </div>
+            <div id="ped">
+                <input id="sub" type="submit" value="Predict">
+                <h1 id="pred">{{ name }}</h1>
+            </div>
+                
+        </form>
+    </div>
+    <div>
+        
+    </div>
+    
+</body>
+</html>
